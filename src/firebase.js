@@ -1,4 +1,10 @@
-import firebase from "firebase";
+import firebase from "firebase/app";
+import { initializeApp } from "firebase/app";
+import { getFirestore } from 'firebase/firestore';
+import { getAuth } from 'firebase/auth';
+import { GoogleAuthProvider } from "firebase/auth";
+import { getStorage } from 'firebase/storage';
+
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -11,11 +17,21 @@ const firebaseConfig = {
     measurementId: "G-GMXCDRMS7Q",
 };
 
-const firebaseApp = firebase.initializeApp(firebaseConfig);
-const db = firebaseApp.firestore();
-const auth = firebase.auth(); //for authentication
-const provider = new firebase.auth.GoogleAuthProvider();
-const storage = firebase.storage();  //for storing images
+const firebaseApp = initializeApp(firebaseConfig);
+const db = getFirestore();
+const auth = getAuth();
+const provider = new GoogleAuthProvider();
+const storage = getStorage();
 
-export { auth, provider, storage };
+export { firebaseApp, auth, provider, storage };
+
 export default db;
+
+
+
+
+
+
+
+
+
