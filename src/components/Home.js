@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import LeftSide from "./Leftside";
+import RightSide from "./Rightside";
 
 
 const Home = (props) => {
@@ -16,6 +17,7 @@ const Home = (props) => {
             </Section>
             <Layout>
                 <LeftSide />
+                <RightSide />
             </Layout>
         </Container>
     );
@@ -69,4 +71,3 @@ const Layout = styled.div`
     padding: 0 5px;
   }
 `;
-
