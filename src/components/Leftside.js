@@ -205,5 +205,4 @@ const CommunityCard = styled(ArtCard)`
   }
 `;
 
-
 export default LeftSide;
